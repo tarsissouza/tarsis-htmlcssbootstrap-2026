@@ -4,128 +4,320 @@
         <title>Mtec Informática para Internet</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
         <link href="css/bootstrap.css" rel="stylesheet" />
+
         <style>
             .header-foto {
                 background-image: url(images/blue_wallpaper.png);
-               background-size: cover, cover; 
-               background-position: center center, center center;
-               background-repeat: no-repeat, no-repeat;
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+
+            /* Organização do carrossel */
+            #carrosselprojetos {
+                max-width: 1100px;
+                margin: 0 auto;
+            }
+
+            #carrosselprojetos .carousel-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            /* Nome e descrição abaixo da imagem */
+            .legenda-carrossel {
+                border: 1px solid #808080;
+                border-radius: 5px;
+                text-align: center;
+                padding: 15px;
+                margin-top: 10px;
+                color: #ffffff;
+                background: transparent;
+            }
+
+            .legenda-carrossel h5 {
+                margin-bottom: 5px;
+            }
+
+            .legenda-carrossel p {
+                margin-bottom: 0;
             }
         </style>
     </head>
-    <!-- <body class="pt-5"> -->
-        <body data-bs-theme="dark" style="padding-top: 90px;">
-    <nav class="navbar navbar-expand-lg bg-dark fixed-top text-uppercase">
-        <div class="container">
-            <a class="navbar-brand active" href="#">
-                <img src="images/artpop.png" alt="logo lady gaga" height="70" class="rounded-circle" />
-            </a>
+
+    <body data-bs-theme="dark" style="padding-top: 90px;">
+
+        <!--Botão de inicio do controle do offcanvas-->
+    <button class="btn btn-primary position-fixed" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasMenu"
+    aria-controls="offCanvasMenu">
+<span class="navbar-toggler-icon"></span>
+    </button>
+<!--Botão de FInal do controle do offcanvas-->
+
+        <!-- Menu principal -->
+        <nav class="navbar navbar-expand-lg bg-dark fixed-top text-uppercase">
+            <div class="container">
+
+                <a class="navbar-brand active" href="#">
+                    <img
+                        src="images/artpop.png"
+                        alt="logo lady gaga"
+                        height="70"
+                        class="rounded-circle"
+                    />
+                </a>
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir menu"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="primeiro.html"
+                                aria-current="page"
+                            >
+                                1ª. Série
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="segundo.html">
+                                2ª. Série
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="terceiro.html">
+                                3ª. Série
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <a href="#" class="btn btn-primary">
+                        Matricule-se
+                    </a>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- Cabeçalho do site -->
+        <header class="text-white py-5 header-foto">
+
+            <div class="container py-5">
+
+                <div class="row align-items-center g-5">
+
+                    <div class="col-lg-7">
+
+                        <p class="text-uppercase small fw-semibold mb-2 opacity-75">
+                            Etec Prof. Milton Gazzetti - Presidente Venceslau
+                        </p>
+
+                        <h1 class="display-4 fw-bold">
+                            Informática para Internet
+                        </h1>
+
+                        <p class="lead mb-0">
+                            Curso técnico gratuito integrado ao Ensino Médio;
+                            Em 3 anos você sai criando sites, aplicativos e
+                            sistemas - do primeiro html ao projeto no ar
+                        </p>
+
+                    </div>
+
+                    <div class="col-lg-5 d-none d-lg-block">
+
+                        <img
+                            src="images/artpop.png"
+                            alt="simbolo pegado do pinterest da Lady Gaga"
+                            class="img-fluid rounded-circle"
+                            style="max-height: 260px; border-radius: 50%;"
+                        />
+
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- Início do carrossel -->
+        <section
+            id="carrosselprojetos"
+            class="carousel slide py-3"
+            data-bs-theme="light"
+        >
+
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+
+                <button
+                    type="button"
+                    data-bs-target="#carrosselprojetos"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Primeira imagem"
+                ></button>
+
+                <button
+                    type="button"
+                    data-bs-target="#carrosselprojetos"
+                    data-bs-slide-to="1"
+                    aria-label="Segunda imagem"
+                ></button>
+
+            </div>
+
+            <!-- Imagens e legendas -->
+            <div class="carousel-inner">
+
+                <!-- Primeiro slide -->
+                <div class="carousel-item active">
+
+                    <div class="ratio ratio-16x9">
+
+                        <img
+                            src="images/lady_gaga_png.png"
+                            alt="Foto da musica alejandro de Lady Gaga"
+                            class="object-fit-cover"
+                        />
+
+                    </div>
+
+                    <!-- Nome abaixo da imagem -->
+                    <div class="legenda-carrossel">
+
+                        <h5 class="fw-semibold">
+                            Lady gaga
+                        </h5>
+
+                        <p>
+                            diferentes eras, cores semelhantes
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Segundo slide -->
+                <div class="carousel-item">
+
+                    <div class="ratio ratio-16x9">
+
+                        <img
+                            src="images/ladygaga_azul.png"
+                            alt="foto da lady gaga"
+                            class="object-fit-cover"
+                        />
+
+                    </div>
+
+                    <!-- Nome abaixo da imagem -->
+                    <div class="legenda-carrossel">
+
+                        <h5 class="fw-semibold">
+                            Lady gaga
+                        </h5>
+
+                        <p>
+                            diferentes eras, cores semelhantes
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Botão para voltar -->
             <button
-                class="navbar-toggler"
+                class="carousel-control-prev"
                 type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#menuPrincipal"
-                aria-controls="menuPrincipal"
-                aria-expanded="false"
-                aria-label="Abrir menu"
+                data-bs-target="#carrosselprojetos"
+                data-bs-slide="prev"
+                aria-label="Imagem anterior"
             >
-                <span class="navbar-toggler-icon"></span>
+
+                <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                ></span>
+
+                <span class="visually-hidden">
+                    Anterior
+                </span>
+
             </button>
 
-            <div class="collapse navbar-collapse" id="menuPrincipal">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="primeiro.html" aria-current="page">1ª. Série</a>
-                        <!-- Segura o ALT e digita 167 -->
-                    </li> 
+            <!-- Botão para avançar -->
+            <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carrosselprojetos"
+                data-bs-slide="next"
+                aria-label="Próxima imagem"
+            >
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="segundo.html">2ª. Série</a>
-                    </li>
+                <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                ></span>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="terceiro.html">3ª. Série</a>
-                    </li>
-                </ul>
+                <span class="visually-hidden">
+                    Próxima
+                </span>
 
-                <a href="#" class="btn btn-primary">Matricule-se</a>
-            </div>
-        </div>
-    </nav>
-    <!--<header class="text-white py-5" style="background: linear-gradient(120deg, #0f172a 0%, #1e3a5f 55%, #0d6fed 130%);"> -->
-  <!--<header class="text-white py-5" style="background: #a6d9ed;background: linear-gradient(90deg,rgba(166, 217, 237, 1) 8%, rgba(52, 115, 186, 1) 50%, rgba(50, 68, 168, 1) 90%);"> -->
-     <header class="text-white py-5 header-foto">
-    <div class="container py-5">
-        <div class="row align-items-center g-5">
-        <div class="col-lg-7">
-           <p class="text-uppercase small fw-semibold mb-2 opacity-75">Etec Prof. Milton Gazzetti - Presidente Venceslau</p>
-           <h1 class="display-4 fw-bold">Informática para Internet</h1>
-           <p class="lead mb-0">
-            Curso técnico gratuito integrado ao Ensino Médio; Em 3 anos você sai criando sites,aplicativos e
-            sistemas - do primeiro html ao projeto no ar
+            </button>
+
+        </section>
+        <!-- Final do carrossel -->
+
+        <!-- Conteúdo da página -->
+        <h1 class="text-primary">
+            Mtec Informática para Internet
+        </h1>
+
+        <p>
+            Página principal do Website
         </p>
+
+            <!--inicio da barra lateral-->
+    <div class="offcanvas offcanvas-start show" tabindex="-1"
+    id="offCanvasMenu" aria-labelledby="offcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasLabel">Menu Mtec</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="col-lg-5 d-none d-lg-block">
-        <img
-            src="images/artpop.png"
-            alt="simbolo pegado do pinterest da Lady Gaga"
-            class="img-fluid rounded-circle"
-            style="max-height: 260px; border-radius: 50%;"   
-        />
+        <div class="offcanvas-body">
+    <p>Mtec informática para internet ensina você a criar
+    sites, sistemas e soluções digitais para o futuro.</p>
+  </div>
+  <div class="offcanvas-bottom">
+    <p class="text-secondary text-bg-light fw-bold p-3">Sair🎀</p>
+  </div>
     </div>
-    </div>
-    </div>
-    </header>
+    <!--Fim da barra lateral-->
 
-    <!-- Início do carrossel -->
-     <section id="carrosselprojetos" class="carousel slide py-3" data-bs-theme="light">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carrosselprojetos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Foto da musica alejandro de Lady Gaga"></button>
-            <button type="button" data-bs-target="#carrosselprojetos" data-bs-slide-to="0" aria-label="Foto de Lady Gaga em era diferente"></button>
-            <button type="button" data-bs-target="#carrosselprojetos" data-bs-slide-to="0" aria-label="Foto de Lady Gaga"></button>
-        </div>
-       <!-- <section id="carrosselprojetos" class="container carousel slide py-3" data-bs-theme="light"> -->
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="ratio ratio-16x9">
-                    <img src="images/lady_gaga_png.png" alt="Foto da musica alejandro de Lady Gaga"
-                    class="object-fit-cover"> 
-                    
-                            <div class="carousel-caption d-done d-md-block text-bg-dark bg-opacity-75 rounded-3 p-3">
-            <h5 class="fw-semibold mb-1">Lady gaga</h5>
-            <p class="mb-0">diferentes eras, cores semelhantes</p>
-        </div>
-
-             <div class="carousel-item">
-                <div class="ratio ratio-16x9">
-                    <img src="images/ladygaga_azul.png" alt="foto da lady gaga" 
-                    class="object-fit-cover">
-                </div>
-
-                <div class="carousel-caption d-done d-md-block text-bg-dark bg-opacity-75 rounded-3 p-3">
-            <h5 class="fw-semibold mb-1">Lady gaga</h5>
-            <p class="mb-0">diferentes eras, cores semelhantes</p>
-                </div>
-            </div>
-                </div>
-            </div>
-
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carrosselprojetos" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden"></span>
-    </button>
-
-    <button class="carousel-control-next" type="button" data-bs-target="#carrosselprojetos" data-bs-slide="prev">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden"></span>
-       </button>
-     </section>
-    <!-- Final do carrossel -->
-
-        <h1 class="text-primary">Mtec Informática para Internet</h1>
-        <p>Página principal do Website</p>
+        <!-- JavaScript do Bootstrap -->
         <script src="js/bootstrap.bundle.min.js"></script>
+
     </body>
 </html>
